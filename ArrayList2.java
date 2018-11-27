@@ -8,7 +8,11 @@ public class ArrayList2{
 			list1.add(i);
 			list2.add(i);
 		}
+		System.out.println(combine(list1, list2));
+		withComma(list1);
+		System.out.println();
 	}
+
 	public static ArrayList<Integer> combine(ArrayList<Integer> a, ArrayList<Integer> b){
 		ArrayList<Integer> list = new ArrayList<>();
 		for(int i = 0; i < a.size(); i++){
@@ -18,5 +22,10 @@ public class ArrayList2{
 			list.add(b.get(i));
 		}
 		return list;
+	}
+	public static void withComma(ArrayList<Integer> a){
+		for(int i = 0; i < a.size(); i++){
+			System.out.print(a.get(i)+", ");
+		}
 	}
 }
